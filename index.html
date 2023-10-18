@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Etch a Sketch</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="lateral-container colors-container">
+            <div class="color-choice" style="background-color: #FF0000;" onclick="changeColor('#FF0000')"></div>
+            <div class="color-choice" style="background-color: #FF8000;" onclick="changeColor('#FF8000')"></div>
+            <div class="color-choice" style="background-color: #FFFF00;" onclick="changeColor('#FFFF00')"></div>
+            <div class="color-choice" style="background-color: #00FF00;" onclick="changeColor('#00FF00')"></div>
+            <div class="color-choice" style="background-color: #00ffff;" onclick="changeColor('#00ffff')"></div>
+            <div class="color-choice" style="background-color: #0000FF;" onclick="changeColor('#0000FF')"></div>
+            <div class="color-choice" style="background-color: #7F00FF;" onclick="changeColor('#7F00FF')"></div>
+            <div class="color-choice" style="background-color: #FF007F;" onclick="changeColor('#FF007F')"></div>
+        </div>
+        <div class="big-container">
+            <div class="main-container" id="main-container">
+  
+            </div>
+            <div class="settings">
+                <label for="select-box">Select your size</label>
+                <select id="select-box">
+                    <option value="Big">64X64</option>
+                    <option value="Mid">32X32</option>
+                    <option value="Normal">16X16</option>
+                    <option value="Little">8X8</option>
+                </select>
+            </div>
+        </div>
+        <div class="lateral-container mode-container">
+            <div class="color-choice" onclick="changeMode('rainbow')">Random</div>
+            <div>BLUE</div>
+            <div>GREEN</div>
+            <div>YEllow</div>
+        </div>
+    </body>
+    <script src="script.js "></script>
+</html>

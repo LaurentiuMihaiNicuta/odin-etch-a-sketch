@@ -1,0 +1,51 @@
+body{
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    
+}
+
+.big-container{
+    display: flex;flex-direction: column;justify-content: center;align-items: center;
+    gap:10px;
+}
+
+.main-container{
+    border:1px solid black;
+    width: 700px;
+    height: 700px;
+    display:flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center; 
+    gap:1px;
+    
+}
+
+.cell{
+    
+    border:1px solid rgb(0, 0, 0);
+    
+}
+
+.lateral-container{
+    border:1px solid red;
+    height: 700px;
+    width:200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    padding:10px;
+    
+}
+
+.color-choice{
+    border:1px solid green;
+    width:100px;
+    height:70px;;
+    border-radius:30px;
+}
