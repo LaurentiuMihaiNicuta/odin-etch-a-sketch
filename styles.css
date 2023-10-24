@@ -13,14 +13,14 @@ body{
 }
 
 .main-container{
-    border:1px solid black;
+    border:3px solid black;
     width: 700px;
     height: 700px;
     display:flex;
     flex-wrap: wrap;
     align-content: center;
     justify-content: center; 
-    gap:1px;
+    gap : 1px;
     
 }
 
@@ -31,7 +31,7 @@ body{
 }
 
 .lateral-container{
-    border:1px solid red;
+    border:3px solid rgb(0, 0, 0);
     height: 700px;
     width:200px;
     display: flex;
@@ -44,8 +44,29 @@ body{
 }
 
 .color-choice{
-    border:1px solid green;
+    border:2px solid black;
     width:100px;
     height:70px;;
     border-radius:30px;
+}
+
+.input{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:0px;
+    border :0px;
+}
+
+.input-color{
+    width:90%;
+}
+
+.confirm-button{
+    margin-top:10px;
+    padding:7px;
+    border-radius:5px;
+    color:white;
+    background-color: rgb(226, 100, 100);
 }

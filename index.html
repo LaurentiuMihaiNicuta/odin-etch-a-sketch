@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <div class="lateral-container colors-container">
+        <div class="lateral-container ">
             <div class="color-choice" style="background-color: #FF0000;" onclick="changeColor('#FF0000')"></div>
             <div class="color-choice" style="background-color: #FF8000;" onclick="changeColor('#FF8000')"></div>
             <div class="color-choice" style="background-color: #FFFF00;" onclick="changeColor('#FFFF00')"></div>
@@ -30,11 +30,17 @@
                 </select>
             </div>
         </div>
-        <div class="lateral-container mode-container">
-            <div class="color-choice" onclick="changeMode('rainbow')">Random</div>
-            <div>BLUE</div>
-            <div>GREEN</div>
-            <div>YEllow</div>
+        <div class="lateral-container ">
+            <div class="color-choice" style="background-image: linear-gradient( 89.7deg, rgba(223,0,0,1) 2.7%, rgba(214,91,0,1) 15.1%, rgba(233,245,0,1) 29.5%, rgba(23,255,17,1) 45.8%, rgba(29,255,255,1) 61.5%, rgba(5,17,255,1) 76.4%, rgba(202,0,253,1) 92.4% );" onclick="changeMode('rainbow')"></div>
+            <div class="color-choice" style="background-color: #686868;"onclick="changeMode('grayscale')"></div>
+            <div class="color-choice" onclick="changeColor('#FFFFFF')"></div>
+            <div class="color-choice input"> 
+
+                <div>HEX CODE</div>
+                <input type="text" class="input-color" id="inputColor">
+                <div class="confirm-button" onclick="changeMode('custom')">CONFIRM</div>
+
+            </div>
         </div>
     </body>
     <script src="script.js "></script>
