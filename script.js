@@ -3,10 +3,11 @@ cell.className = 'cell';
 let mainContainer = document.querySelector('#main-container');
 let inputColor = document.querySelector('#inputColor');
 
-
-
 colorString = "#000000";
 colorMode = 'simple';
+
+
+let grayIndex = 0;
 
 let rainbowArray= ['#FF0000','#FF8000','#FFFF00','#00FF00','#00ffff','#0000FF','#7F00FF','#FF007F'];
 let grayArray= ["#000000", '#202020' , '#404040','#606060','#808080','#A0A0A0','#C0C0C0','#E0E0E0'];
@@ -36,6 +37,7 @@ render(64,64);
 
 function render(numRows, numCols) {
     mainContainer.innerHTML = "";
+  
 
     for (let i = 0; i < numRows; i++) {
         for (let j = 0; j < numCols; j++) {
@@ -54,15 +56,17 @@ function render(numRows, numCols) {
                     clone.style.background = rainbowArray[i];
                 }
                 if (colorMode == 'grayscale'){
-                    for(let i = 0 ; i < grayArray.length ; i++ ){
-                        clone.style.background = grayArray[i];
+                    if (grayIndex < grayArray.length) {
+                        clone.style.background = grayArray[grayIndex];
+                        grayIndex++; // Trecem la următoarea culoare din grayArray
+                    } else {
+                        grayIndex = 0; // Revenim la prima culoare dacă am ajuns la sfârșit
                     }
-                   
                 }
 
                 if (colorMode == 'custom'){
                     let inputColorValue = inputColor.value;
-                    clone.style.background = inputColorValue;
+                    clone[i].style.background = inputColorValue;
 
                 }
             });
